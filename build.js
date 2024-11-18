@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const path = require('path');
 
 async function generateStaticPages() {
     const browser = await puppeteer.launch({
@@ -10,41 +9,41 @@ async function generateStaticPages() {
     const page = await browser.newPage();
     
     try {
-        // Obtener posts de WordPress
         const response = await fetch('https://public-api.wordpress.com/rest/v1.1/sites/expertoweb2.wordpress.com/posts');
         const data = await response.json();
         
-        // Crear directorio dist si no existe
-        fs.mkdirSync('./dist', { recursive: true });
-        
-        // Copiar archivos estáticos
-        fs.copyFileSync('./index.html', './dist/index.html');
-        fs.copyFileSync('./post.js', './dist/post.js');
-        
-        // Generar páginas para cada post
         for (const post of data.posts) {
-            const postPath = `./dist/${post.slug}`;
-            fs.mkdirSync(postPath, { recursive: true });
-            
-            // Generar HTML con contenido pre-renderizado
             const html = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="description" content="${post.excerpt.replace(/<[^>]*>/g, '').substring(0, 160)}">
-                    <title>${post.title}</title>
-                </head>
-                <body>
-                    <div id="post-content">
-                        <h1>${post.title}</h1>
-                        ${post.content}
-                    </div>
-                </body>
-                </html>
-            `;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${post.title}</title>
+    <meta name="description" content="${post.excerpt.replace(/<[^>]*>/g, '').substring(0, 160)}">
+    <meta name="keywords" content="experto wordpress, trabajos wordpres, Web Full-Stack">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="medium-padding" style="max-width: 750px; margin: 0 auto">
+        <a class="button border secondary" href="./blog">Volver al blog</a>
+        <div id="post-content">
+            <h1>${post.title}</h1>
+            ${post.content}
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>`;
             
-            fs.writeFileSync(`${postPath}/index.html`, html);
+            // Crear directorio para el post
+            const postDir = `./dist/post/${post.slug}`;
+            fs.mkdirSync(postDir, { recursive: true });
+            fs.writeFileSync(`${postDir}/index.html`, html);
         }
     } catch (error) {
         console.error('Error:', error);
@@ -55,3 +54,4 @@ async function generateStaticPages() {
 }
 
 generateStaticPages();
+
