@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogger code</title>
+    <meta name="description" content="Blogger es una joya escondida, es una plataforma fantástica que, a menudo, se subestima en comparación con otras opciones para crear sitios web. A continuación,">
+    <meta name="keywords" content="experto wordpress, trabajos wordpres, Web Full-Stack">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="medium-padding" style="max-width: 750px; margin: 0 auto">
+        <a class="button border secondary" href="./blog">Volver al blog</a>
+        <div id="post-content">
+            <h1>blogger code</h1>
+            
+<p>Blogger es una joya escondida, es una plataforma fantástica que, a menudo, se subestima en comparación con otras opciones para crear sitios web. A continuación, te presento algunas razones por las que considero que Blogger es una joya escondida:</p>
+
+
+
+<p><strong>1. Facilidad de uso:</strong> Blogger destaca por su sencillez e intuitividad. Crear y administrar un blog en Blogger no requiere conocimientos técnicos complejos, lo que lo hace ideal para principiantes y usuarios sin experiencia en programación o diseño web.</p>
+
+
+
+<p><strong>2. Interfaz amigable:</strong> La interfaz de Blogger es limpia, organizada y fácil de navegar, tanto para los creadores de contenido como para los visitantes del sitio. Esto permite una experiencia de usuario fluida y agradable.</p>
+
+
+
+<p><strong>3. Funciones personalizables:</strong> A pesar de su simplicidad, Blogger ofrece una variedad de opciones de personalización para que puedas adaptar tu blog a tu gusto y marca. Puedes modificar la plantilla, los colores, la tipografía y otros elementos para crear un sitio web único y atractivo.</p>
+
+
+
+<p><strong>4. Integración con Google:</strong> Blogger se integra perfectamente con otras herramientas y servicios de Google, como Google Analytics, AdSense y Search Console. Esto facilita el seguimiento del rendimiento de tu blog, monetizarlo y optimizarlo para los motores de búsqueda.</p>
+
+
+
+<p><strong>5. Gratuito:</strong> Una de las mayores ventajas de Blogger es que es completamente gratuito. No hay que pagar cuotas mensuales ni cargos ocultos, lo que lo convierte en una opción muy asequible para crear un sitio web.</p>
+
+
+
+<p><strong>6. Comunidad activa:</strong> Si bien es cierto que WordPress ha experimentado un crecimiento significativo en los últimos años, <strong><a href="https://support.google.com/blogger/community?hl=eS" target="_blank" rel="noreferrer noopener nofollow">la comunidad de Blogger sigue siendo muy activa y comprometida.</a></strong></p>
+
+
+
+<p><strong>Almacena videos e imágenes sin límites en Blogger!</strong></p>
+
+
+
+<p>Uno de los aspectos más destacados de Blogger es su <strong>almacenamiento ilimitado gratuito</strong> <strong>para imágenes y videos.</strong> Esto significa que puedes subir y publicar tantos archivos multimedia como quieras sin preocuparte por exceder un límite de espacio o incurrir en costos adicionales de servidor.</p>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibltWNOGvgK_CVtzYsnDbuQM5Gjdgj458xEqcz3VrT_6nn2mpbRtCO7sDMft27ZxJQoGqTekXQVQXwu7kJzS2Z4Os0gbdMaen5nXRzcUolhx95ahxMdjhJLhCXWr3h2tLHkzFQgwqVi-vW/s1600/blogger+desing.png" alt="" style="width:620px;height:auto" /></figure>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Códigos para blogger</p>
+</blockquote>
+
+
+
+<p></p>
+
+
+
+<p>Los condicionales en Blogger te permiten mostrar contenido de forma selectiva en función de diferentes criterios. Esto te da mucha flexibilidad para personalizar tu blog y adaptarlo a las necesidades de tus lectores.</p>
+
+
+
+<h2 class="wp-block-heading">¿Cómo funcionan los condicionales en Blogger?</h2>
+
+
+
+<p>Los condicionales en Blogger se basan en etiquetas específicas que puedes utilizar para indicar la condición que se debe evaluar. Estas etiquetas se combinan con operadores lógicos para definir la lógica de la condición.</p>
+
+
+
+<p><strong>Estructura básica de un condicional en Blogger:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;CONDICIÓN&#039;&gt;
+  &lt;/b:if&gt;
+&lt;b:else&gt;
+  &lt;/b:else&gt;
+
+</pre></div>
+
+
+<p><strong>Ejemplo 1: Ocultar etiquetas en entradas específicas</strong></p>
+
+
+
+<p>Imagina que quieres ocultar las etiquetas en las entradas que pertenecen a la categoría &#8220;Tutoriales&#8221;. Para ello, puedes usar el siguiente código:</p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:post.labels != &amp;quot;Tutoriales&amp;quot;&#039;&gt;
+  &lt;b:foreach $item=&#039;data:post.labels&#039; var=&#039;label&#039;&gt;
+    &lt;a href=&#039;&lt;b:url label=$label.id /&gt;&#039;&gt;#&lt;b:data var=&#039;label.name&#039; /&gt;&lt;/a&gt;
+  &lt;/b:foreach&gt;
+&lt;/b:if&gt;
+
+</pre></div>
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>data:post.labels</code> devuelve una lista de las etiquetas de la entrada actual.</li>
+
+
+
+<li><code>!=</code> es el operador lógico &#8220;distinto de&#8221;.</li>
+
+
+
+<li><code>&amp;quot;Tutoriales&amp;quot;</code> es la cadena de texto que representa la categoría &#8220;Tutoriales&#8221;.</li>
+
+
+
+<li>Si la condición es verdadera (es decir, la entrada no pertenece a la categoría &#8220;Tutoriales&#8221;), se muestra el código HTML para las etiquetas.</li>
+
+
+
+<li><code>b:foreach</code> se utiliza para iterar sobre la lista de etiquetas y mostrar cada una de ellas como un enlace.</li>
+
+
+
+<li>Si la condición es falsa (es decir, la entrada pertenece a la categoría &#8220;Tutoriales&#8221;), no se muestra el código HTML para las etiquetas.</li>
+</ul>
+
+
+
+<p><strong>Ejemplo 2: Mostrar diferentes anuncios según la página</strong></p>
+
+
+
+<p>Supongamos que quieres mostrar un anuncio de AdSense en la página principal de tu blog y otro anuncio en las entradas individuales. Puedes usar el siguiente código:</p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:blog.pageType != &amp;quot;index&amp;quot;&#039;&gt;
+  &lt;/b:if&gt;
+&lt;b:else&gt;
+  &lt;/b:else&gt;
+
+</pre></div>
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>data:blog.pageType</code> devuelve el tipo de página que se está mostrando (por ejemplo, &#8220;index&#8221; para la página principal, &#8220;item&#8221; para una entrada individual).</li>
+
+
+
+<li><code>!=</code> es el operador lógico &#8220;distinto de&#8221;.</li>
+
+
+
+<li><code>&amp;quot;index&amp;quot;</code> es la cadena de texto que representa la página principal.</li>
+
+
+
+<li>Si la condición es verdadera (es decir, no se está mostrando la página principal), se muestra el código HTML del anuncio para entradas individuales.</li>
+
+
+
+<li>Si la condición es falsa (es decir, se está mostrando la página principal), se muestra el código HTML del anuncio para la página principal.</li>
+</ul>
+
+
+
+<p><strong>¡Importante!</strong></p>
+
+
+
+Recuerda que debes editar la plantilla de tu blog para poder insertar los códigos condicionales. Si no te sientes cómodo haciéndolo tú mismo, puedes buscar ayuda en un foro de Blogger o contratar a un profesional.
+
+
+
+<h2 class="wp-block-heading">Ejemplos de uso para condicionales de páginas en Blogger</h2>
+
+
+
+<p>Los condicionales que mencionaste te permiten controlar el contenido que se muestra en función del tipo de página que se está visitando en tu blog de Blogger. A continuación, te presento algunos ejemplos de uso:</p>
+
+
+
+<p><strong>1. Mostrar un banner diferente en dispositivos móviles:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:blog.isMobileRequest&#039;&gt;
+  &lt;div class=&#039;banner-movil&#039;&gt;
+    &lt;h1&gt;¡Bienvenido a mi blog desde tu móvil!&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/b:if&gt;
+&lt;b:else&gt;
+  &lt;div class=&#039;banner-principal&#039;&gt;
+    &lt;h1&gt;¡Bienvenido a mi blog!&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/b:else&gt;
+
+</pre></div>
+
+
+<p><strong>2. Ocultar comentarios en la página principal:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:view.isHomepage&#039;&gt;
+  &lt;/b:if&gt;
+&lt;b:else&gt;
+  &lt;b:if cond=&#039;data:post.comments&#039;&gt;
+    &lt;h2&gt;Comentarios&lt;/h2&gt;
+    &lt;b:disqus:comment/&gt; &lt;/b:if&gt;
+&lt;/b:else&gt;
+
+</pre></div>
+
+
+<p><strong>3. Añadir una clase CSS específica a las entradas individuales:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:view.isPost&#039;&gt;
+  &lt;div class=&#039;entrada&#039; id=&#039;post-&lt;data:post.id /&gt;&#039;&gt;
+    &lt;/div&gt;
+&lt;/b:if&gt;
+
+</pre></div>
+
+
+<p><strong>4. Cambiar el título de la página para las búsquedas:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:view.search&#039;&gt;
+  &lt;title&gt;Resultados de búsqueda para: &quot;&lt;b:data var=&#039;data:view.search.query&#039; /&gt;&quot;&lt;/title&gt;
+&lt;/b:if&gt;
+&lt;b:else&gt;
+  &lt;title&gt;&lt;b:data var=&#039;data:blog.title&#039; /&gt;&lt;/title&gt;
+&lt;/b:else&gt;
+
+</pre></div>
+
+
+<p><strong>5. Mostrar un mensaje personalizado en caso de error 404:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:view.isError&#039;&gt;
+  &lt;h1&gt;¡Página no encontrada!&lt;/h1&gt;
+  &lt;p&gt;Lo sentimos, la página que buscas no existe.&lt;/p&gt;
+&lt;/b:if&gt;
+
+</pre></div>
+
+
+<p><strong>Explicación adicional:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code class="">data:blog.isMobileRequest</code>: Devuelve <code class="">true</code> si el usuario está visitando el blog desde un dispositivo móvil, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isHomepage</code>: Devuelve <code class="">true</code> si la página actual es la página principal, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isPost</code>: Devuelve <code class="">true</code> si la página actual es una entrada individual, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isPage</code>: Devuelve <code class="">true</code> si la página actual es una página estática, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.search.label</code>: Devuelve la etiqueta seleccionada en una búsqueda por etiqueta, <code class="">""</code> si no hay ninguna etiqueta seleccionada.</li>
+
+
+
+<li><code class="">data:view.search.query</code>: Devuelve la consulta de búsqueda introducida por el usuario, <code class="">""</code> si no hay ninguna consulta.</li>
+
+
+
+<li><code class="">data:view.isArchive</code>: Devuelve <code class="">true</code> si la página actual es una página de archivo, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isError</code>: Devuelve <code class="">true</code> si la página actual es una página de error, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isSingleItem</code>: Devuelve <code class="">true</code> si la página actual muestra un único elemento (por ejemplo, una entrada individual), <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isMultipleItems</code>: Devuelve <code class="">true</code> si la página actual muestra varios elementos (por ejemplo, una página de archivo), <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isPreview</code>: Devuelve <code class="">true</code> si la página actual es una vista previa de una entrada o página, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:view.isLayoutMode</code>: Devuelve <code class="">true</code> si el blog se está mostrando en el modo de edición de diseño, <code class="">false</code> en caso contrario.</li>
+
+
+
+<li><code class="">data:blog.pageType in {&amp;quot;static_page&amp;quot;,&amp;quot;item&amp;quot;}</code>: Evalúa si el tipo de página actual es una página estática (<code class="">static_page</code>) o una entrada individual (<code class="">item</code>).</li>
+</ul>
+
+
+
+<p>Estos son solo algunos ejemplos, puedes combinar estos condicionales y lógica booleana para crear comportamientos más complejos en tu blog de Blogger.</p>
+
+
+
+<h2 class="wp-block-heading">Ejemplo de uso de la etiqueta <code>b:class</code> </h2>
+
+
+
+<p><strong>Código HTML:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;body&gt;
+  &lt;div class=&quot;contenido&quot;&gt;
+    &lt;/div&gt;
+
+  &lt;b:class cond=&#039;data:view.isHomepage&#039; name=&#039;es-inicio&#039;/&gt;
+  &lt;b:class cond=&#039;data:view.isPost&#039; name=&#039;es-entrada&#039;/&gt;
+&lt;/body&gt;
+
+</pre></div>
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Estructura:</strong> El código se coloca dentro de la etiqueta <code class="">&lt;body&gt;</code> de tu plantilla de Blogger.</li>
+
+
+
+<li><strong>Contenedor de contenido:</strong> El elemento <code class="">&lt;div class="contenido"&gt;</code> actúa como un contenedor para el contenido de tu blog (texto, imágenes, etc.).</li>
+
+
+
+<li><strong>Clases condicionales:</strong>
+<ul class="wp-block-list">
+<li><code class="">&lt;b:class cond='data:view.isHomepage' name='es-inicio'/&gt;</code>: Esta línea comprueba si la página actual es la página principal (<code class="">data:view.isHomepage</code>). Si es verdadera, agrega una clase llamada &#8220;es-inicio&#8221; al elemento <code class="">&lt;body&gt;</code> usando la etiqueta <code class="">&lt;b:class&gt;</code>.</li>
+
+
+
+<li><code class="">&lt;b:class cond='data:view.isPost' name='es-entrada'/&gt;</code>: Esta línea comprueba si la página actual es una entrada (<code class="">data:view.isPost</code>). Si es verdadera, agrega una clase llamada &#8220;es-entrada&#8221; al elemento <code class="">&lt;body&gt;</code>.</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p><strong>Ejemplo de CSS (estilo):</strong></p>
+
+
+
+<p>CSS</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+/* stylesheet.css */
+
+body.es-inicio {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+body.es-entrada {
+  background-color: #fff;
+  padding: 10px;
+}
+
+</pre></div>
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Este código CSS de ejemplo define estilos para las clases &#8220;es-inicio&#8221; y &#8220;es-entrada&#8221;.</li>
+
+
+
+<li>Cuando la página es la página principal (debido a la clase &#8220;es-inicio&#8221;), tendrá un fondo gris claro y un relleno de 20px.</li>
+
+
+
+<li>Cuando la página es una entrada (debido a la clase &#8220;es-entrada&#8221;), tendrá un fondo blanco y un relleno de 10px.</li>
+</ul>
+
+
+
+<p><strong>Recuerda:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Necesitas crear un archivo CSS separado (por ejemplo, stylesheet.css) y cargarlo en tu tema de Blogger para que los estilos surtan efecto.</li>
+
+
+
+<li>Puedes modificar los estilos CSS para lograr el diseño deseado para la página principal y las entradas.</li>
+
+
+
+<li>Este es un ejemplo básico. Puedes agregar más clases y estilos condicionales para apuntar a diferentes tipos de páginas en tu tema de Blogger.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Etiquetas <code>&lt;b:section&gt;</code> en Blogger: Descripción y Usos</h2>
+
+
+
+<p>Las etiquetas <code class="">&lt;b:section&gt;</code> y <code class="">&lt;/b:section&gt;</code> en Blogger se utilizan para definir secciones dentro de la plantilla de tu blog. Estas secciones te permiten organizar el contenido de tu blog de manera más estructurada y flexible, facilitando la aplicación de estilos CSS y la gestión de widgets.</p>
+
+
+
+<p><strong>Estructura básica:</strong></p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:section id=&quot;nombre-seccion&quot; class=&quot;clase-seccion&quot;&gt;
+  &lt;/b:section&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code class="">id="nombre-seccion"</code>: Asigna un identificador único a la sección, que puedes usar en tu CSS para aplicar estilos específicos.</li>
+
+
+
+<li><code class="">class="clase-seccion"</code>: Asigna una o más clases CSS a la sección, lo que te permite aplicar estilos generales o específicos a la sección.</li>
+
+
+
+<li>&#8220;: Aquí se coloca el contenido HTML que pertenece a esa sección, como texto, imágenes, widgets, etc.</li>
+</ul>
+
+
+
+<p><strong>Ejemplo de uso:</strong></p>
+
+
+
+<p>Supongamos que quieres dividir la página principal de tu blog en tres secciones: una para el encabezado, otra para el contenido principal y otra para la barra lateral. Puedes usar el siguiente código:</p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;body&gt;
+
+  &lt;b:section id=&quot;encabezado&quot; class=&quot;seccion-encabezado&quot;&gt;
+    &lt;/b:section&gt;
+
+  &lt;b:section id=&quot;contenido-principal&quot; class=&quot;seccion-contenido&quot;&gt;
+    &lt;/b:section&gt;
+
+  &lt;b:section id=&quot;barra-lateral&quot; class=&quot;seccion-barra-lateral&quot;&gt;
+    &lt;/b:section&gt;
+
+&lt;/body&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<p><strong>Beneficios de usar <code>&lt;b:section&gt;</code>:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Organización:</strong> Te ayuda a estructurar mejor el contenido de tu blog, dividiéndolo en secciones lógicas.</li>
+
+
+
+<li><strong>Estilos CSS:</strong> Facilita la aplicación de estilos CSS específicos a cada sección, lo que te permite crear un diseño más personalizado.</li>
+
+
+
+<li><strong>Gestión de widgets:</strong> Te permite agrupar y organizar widgets en diferentes secciones, mejorando la disposición del contenido.</li>
+
+
+
+<li><strong>Flexibilidad:</strong> Permite crear diseños de página más complejos y adaptables a diferentes necesidades.</li>
+</ul>
+
+
+
+<p><strong>Consideraciones adicionales:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Las secciones se anidan, es decir, puedes tener secciones dentro de otras secciones.</li>
+
+
+
+<li>Las secciones se sustituyen por etiquetas <code class="">&lt;div&gt;</code> en el HTML publicado, lo que garantiza compatibilidad con diferentes navegadores.</li>
+
+
+
+<li>Puedes usar la pestaña &#8220;Elementos de página&#8221; en el editor de Blogger para crear y administrar secciones de forma visual.</li>
+</ul>
+
+
+
+<p><strong>Combinar secciones con condicionales de Blogger:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Estrategia:</strong> Envolver cada sección dentro de un condicional de Blogger, como <code>&lt;b:if&gt;</code> o <code>&lt;b:else&gt;</code>, para mostrar u ocultar la sección en función de una condición específica.</li>
+
+
+
+<li><strong>Ejemplo:</strong> Supongamos que quieres mostrar una sección de &#8220;Entradas recientes&#8221; solo en la página principal. Puedes usar el siguiente código:</li>
+</ul>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:if cond=&#039;data:view.isHomepage&#039;&gt;
+  &lt;b:section id=&quot;entradas-recientes&quot; class=&quot;seccion-entradas-recientes&quot;&gt;
+    &lt;/b:section&gt;
+&lt;/b:if&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Consideraciones:</strong>
+<ul class="wp-block-list">
+<li>Este enfoque requiere crear múltiples secciones y condicionales, lo que puede aumentar la complejidad del código.</li>
+
+
+
+<li>Asegúrate de cerrar correctamente los condicionales (<code>&lt;/b:if&gt;</code>, <code>&lt;/b:else&gt;</code>) para evitar errores en la plantilla.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Estructura básica de la plantilla:</h2>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+  &lt;b:meta content=&#039;index&#039; name=&#039;robots&#039;/&gt;
+  &lt;b:meta content=&#039;blogger&#039; name=&#039;generator&#039;/&gt;
+  &lt;title&gt;Tu título del blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class=&quot;contenedor-principal&quot;&gt;
+
+    &lt;header&gt;
+      &lt;/header&gt;
+
+    &lt;main&gt;
+
+      &lt;b:section id=&quot;ContentSection&quot;&gt;
+        &lt;b:widget id=&#039;Blog1&#039; locked=&#039;true&#039; title=&#039;Blog Widget&#039; type=&#039;Blog&#039; version=&#039;2&#039; visible=&#039;true&#039;&gt;
+          &lt;b:includable id=&#039;main&#039;&gt;
+            &lt;b:loop values=&#039;data:posts&#039; var=&#039;post&#039;&gt;
+              &lt;h2 class=&quot;titulo-entrada&quot;&gt;&lt;data:post.title/&gt;&lt;/h2}
+            &lt;/b:loop&gt;
+          &lt;/b:includable&gt;
+        &lt;/b:widget&gt;
+      &lt;/b:section&gt;
+
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;/footer&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<p><strong>Explicación:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Estructura básica HTML:</strong> Se define el tipo de documento (<code class="">&lt;!DOCTYPE html&gt;</code>), el inicio del documento HTML (<code class="">&lt;html&gt;</code>), la sección de metadatos (<code class="">&lt;head&gt;</code>), el título del blog (<code class="">&lt;title&gt;</code>) y el cuerpo del contenido (<code class="">&lt;body&gt;</code>).</li>
+
+
+
+<li><strong>Contenedor principal:</strong> Se crea un contenedor principal (<code class="">&lt;div class="contenedor-principal"&gt;</code>) para agrupar los elementos de la página.</li>
+
+
+
+<li><strong>Encabezado, sección principal y pie de página:</strong> Se definen secciones para el encabezado (<code class="">&lt;header&gt;</code>), la sección principal (<code class="">&lt;main&gt;</code>) y el pie de página (<code class="">&lt;footer&gt;</code>).</li>
+
+
+
+<li><strong>Sección con widget &#8220;Blog1&#8221;:</strong> Dentro de la sección principal (<code class="">&lt;main&gt;</code>), se crea una sección con ID &#8220;ContentSection&#8221; (<code class="">&lt;b:section id="ContentSection"&gt;</code>). Dentro de esta sección, se agrega el widget &#8220;Blog1&#8221; (<code class="">&lt;b:widget id='Blog1'...&gt;</code>).
+<ul class="wp-block-list">
+<li>Se configura el widget con las propiedades:
+<ul class="wp-block-list">
+<li><code class="">locked='true'</code>: Evita la edición directa del widget.</li>
+
+
+
+<li><code class="">title='Blog Widget'</code>: Define el título del widget.</li>
+
+
+
+<li><code class="">type='Blog' version='2'</code>: Especifica el tipo y versión del widget.</li>
+
+
+
+<li><code class="">visible='true'</code>: Muestra el widget en la sección.</li>
+</ul>
+</li>
+
+
+
+<li>Se define la plantilla para el contenido del widget (<code class="">&lt;b:includable id='main'&gt;</code>).
+<ul class="wp-block-list">
+<li>Dentro de la plantilla, se crea un bucle (<code class="">&lt;b:loop values='data:posts' var='post'&gt;</code>) que itera sobre las entradas del blog.</li>
+
+
+
+<li>Para cada entrada, se muestra el título (<code class="">&lt;h2 class="titulo-entrada"&gt;&lt;data:post.title/&gt;&lt;/h2}&gt;</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+
+
+
+<li><strong>Cierre de la estructura:</strong> Se cierran las secciones y el documento HTML.</li>
+</ul>
+
+
+
+<p><strong>2. Personalización:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Ajustes de diseño:</strong> Puedes modificar los estilos CSS del código para personalizar la apariencia de tu blog, como colores, tipografías, tamaños de fuente, márgenes, etc.</li>
+
+
+
+<li><strong>Contenido del widget:</strong> Puedes modificar la plantilla del widget dentro de <code class="">&lt;b:includable&gt;</code> para mostrar otras propiedades de las entradas además del título, como la fecha, un resumen del contenido, imágenes, etc.</li>
+
+
+
+<li><strong>Elementos adicionales:</strong> Puedes agregar otros elementos a tu plantilla, como barras laterales, widgets adicionales, formularios de contacto, etc.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Explicación detallada del código con etiqueta <code>&lt;b:tag&gt;</code> en Blogger:</h2>
+
+
+
+<p>La etiqueta <code class="">&lt;b:tag&gt;</code> es una herramienta poderosa en las plantillas de Blogger para generar dinámicamente elementos HTML en función de condiciones y expresiones específicas. Te permite crear elementos personalizados y flexibles que se adaptan al contexto de la página del blog o a los datos.</p>
+
+
+
+<p><strong>Estructura de la etiqueta <code>&lt;b:tag&gt;</code>:</strong></p>
+
+
+
+<p>La etiqueta <code class="">&lt;b:tag&gt;</code> tiene una sintaxis específica que define el tipo de elemento HTML que se generará, las condiciones bajo las que se debe generar y el contenido que se insertará.</p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:tag name=&quot;&#91;Nombre del elemento HTML]&quot; cond=&quot;&#91;Expresión de condición]&quot;&gt;
+  &#91;Contenido a insertar]
+&lt;/b:tag&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<p><strong>Atributos clave:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong><code>name</code>:</strong> Este atributo especifica el tipo de elemento HTML que se generará. Por ejemplo, <code class="">name="a"</code> creará una etiqueta de anclaje <code class="">&lt;a&gt;</code>.</li>
+
+
+
+<li><strong><code>cond</code>:</strong> Este atributo define una condición que determina si se debe generar el elemento HTML. La expresión de condición puede utilizar variables, operadores y sentencias lógicas.</li>
+</ul>
+
+
+
+<p><strong>Ejemplo de uso:</strong></p>
+
+
+
+<p>Consideremos el siguiente ejemplo:</p>
+
+
+
+<p>HTML</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;b:tag name=&quot;a&quot; cond=&quot;data:blog.pageType == &#039;item&#039;&quot;&gt;
+  &lt;data:blog.title /&gt;
+&lt;/b:tag&gt;
+
+</pre></div>
+
+
+<p></p>
+
+
+
+<p>En este ejemplo:</p>
+
+
+
+<ul class="wp-block-list">
+<li>La etiqueta <code class="">&lt;b:tag&gt;</code> generará una etiqueta <code class="">&lt;a&gt;</code>.</li>
+
+
+
+<li>El atributo <code class="">cond</code> comprueba si la variable <code class="">data:blog.pageType</code> es igual a <code class="">'item'</code>.</li>
+
+
+
+<li>Si la condición es verdadera (es decir, la página es una única entrada de blog), el contenido <code class="">data:blog.title</code> se insertará en la etiqueta <code class="">&lt;a&gt;</code>, creando un enlace con el título de la entrada del blog.</li>
+</ul>
+
+
+
+<p><strong>Uso avanzado:</strong></p>
+
+
+
+<p>La etiqueta <code class="">&lt;b:tag&gt;</code> puede manejar condiciones y expresiones más complejas, lo que te permite generar dinámicamente diversos elementos HTML en función de diferentes criterios. También se puede utilizar para insertar contenido dinámico, como variables o datos del blog.</p>
+
+
+
+<p><strong>Beneficios de usar <code>&lt;b:tag&gt;</code>:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Generación dinámica de HTML:</strong> Crea elementos HTML en función de condiciones y datos, lo que hace que las plantillas sean más flexibles.</li>
+
+
+
+<li><strong>Contenido condicional:</strong> Incluye o excluye contenido en función de criterios específicos, lo que mejora la lógica de la plantilla.</li>
+
+
+
+<li><strong>Elementos basados en datos:</strong> Inserta contenido dinámico a partir de variables o datos del blog, personalizando la experiencia del usuario.</li>
+</ul>
+
+
+
+<p><strong>Consideraciones:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Complejidad de la plantilla:</strong> El uso excesivo de <code class="">&lt;b:tag&gt;</code> puede hacer que las plantillas sean complejas y difíciles de mantener.</li>
+
+
+
+<li><strong>Lógica de condiciones:</strong> Construye cuidadosamente las expresiones de condición para garantizar la correcta generación de elementos.</li>
+
+
+
+<li><strong>Optimización del rendimiento:</strong> Utiliza <code class="">&lt;b:tag&gt;</code> de forma juiciosa para evitar cuellos de botella en el rendimiento.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="h-remove-blogger-default-unused-css"><strong>Eliminar</strong>&nbsp;el CSS no utilizado predeterminado de Blogger</h2>
+
+
+
+<p>Para eliminar el CSS predeterminado de un blog de Blogger, debes&nbsp;editar el archivo de tema XML de Blogger&nbsp;. Ahora verifique la etiqueta &lt;html&gt; en el tema, agréguela&nbsp;<code>css='false'</code>a esta línea y listo. Eliminaste el CSS no utilizado del blog de Blogger. Los códigos se verán así.</p>
+
+
+
+<p><strong>Antes de realizar cualquier cambio, el código del tema se verá así</strong></p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html b:defaultwidgetversion=&#039;2&#039; b:layoutsVersion=&#039;3&#039; b:responsive=&#039;true&#039; ......&gt;
+</pre></div>
+
+
+<p><strong>Después de realizar los cambios en el código para eliminar CSS del blog. El código se verá así</strong></p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html b:css=&#039;false&#039; b:defaultwidgetversion=&#039;2&#039; b:layoutsVersion=&#039;3&#039; b:responsive=&#039;true&#039; ......&gt;
+</pre></div>
+
+
+<p>Debe guardar el archivo del tema y verificar que se eliminará el widget javascript. Después de eliminar este script, puede verificar</p>
+
+
+
+<h3 class="wp-block-heading" id="h-removing-default-js-and-css-from-blogger">Eliminar JS y CSS predeterminados de Blogger</h3>
+
+
+
+<p>Para eliminar tanto javascript como CSS del blog de Blogger, debes agregar&nbsp;<code>b:css='false'</code>y&nbsp;<code>b:js='false'</code>en la&nbsp;<code>&lt;html&gt;</code>etiqueta de la plantilla.</p>
+
+
+
+<p>El código final después de eliminar JS y CSS predeterminados del blog de Blogger se verá así.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html b:css=&#039;false&#039; b:js=&#039;false&#039; b:defaultwidgetversion=&#039;2&#039; b:layoutsVersion=&#039;3&#039; b:responsive=&#039;true&#039; ......&gt;
+</pre></div>
+
+
+<p>Al utilizar el método anterior, puede eliminar JS y CSS predeterminados del blog de Blogger.</p>
+
+
+
+<p>Ventajas de eliminar JS predeterminado</p>
+
+
+
+<ul class="wp-block-list">
+<li>Mejora el tiempo de carga, aumenta la velocidad del sitio web,</li>
+
+
+
+<li>Mejorar la experiencia del usuario,</li>
+
+
+
+<li>Impulsar el SEO del blog.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="h-cons-of-removing-default-js-from-the-blogger-blog">Desventajas de eliminar JS predeterminado del blog de Blogger.</h3>
+
+
+
+<p>Existen algunas limitaciones si elimina el JS predeterminado del blog de Blogger. Estos son</p>
+
+
+
+<ul id="block-11704cb9-c79c-444e-a574-ddf50173364e" class="wp-block-list">
+<li>El formulario de Contacto no funcionará si está en el diseño del portal, pero no te preocupes; puede&nbsp;crear una página de contacto para el&nbsp;blog de Blogger.</li>
+
+
+
+<li>No podrá&nbsp;<strong>modificar su tema simplemente visitando la sección Diseño de su sitio web</strong>&nbsp;. En cualquier momento, si tiene que realizar algunos cambios en el diseño de su página web, entonces en este caso. Tienes que eliminarla&nbsp;<code>b:js='false'</code>de la etiqueta HTML y personalizarla. Puede agregarlo nuevamente después de realizar los cambios necesarios.</li>
+
+
+
+<li>El widget de Blogger que necesita javascript para realizar su función no funcionará.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Tema de inicio en blanco</h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'&gt;
+  &lt;head&gt;
+    &lt;meta expr:charset='data:blog.encoding'/&gt;
+    &lt;meta content='width=device-width,initial-scale=1' name='viewport'/&gt;
+    &lt;title&gt;&lt;data:view.title.escaped/&gt;&lt;/title&gt;
+    &lt;meta expr:content='data:view.description.escaped' name='description'/&gt;
+    &lt;link expr:href='data:view.url.canonical' rel='canonical'/&gt;
+    &lt;link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/&gt;
+    &lt;b:if cond='data:view.isLayoutMode'&gt;
+      &lt;b:skin&gt;&lt;!&#091;CDATA&#091;]]&gt;&lt;/b:skin&gt;
+    &lt;/b:if&gt;
+    &lt;style&gt;/*&lt;!&#091;CDATA&#091;*/
+    /*]]&gt;*/&lt;/style&gt;
+    &lt;b:defaultmarkups&gt;
+      &lt;b:defaultmarkup type='All'&gt;
+        &lt;b:includable id='main'/&gt;
+        &lt;b:includable id='content'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='AdSense,Blog'&gt;
+        &lt;b:includable id='defaultAdUnit'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Blog,PopularPosts,FeaturedPost'&gt;
+        &lt;b:includable id='blogThisShare'/&gt;
+        &lt;b:includable id='bylineByName'/&gt;
+        &lt;b:includable id='bylineRegion'/&gt;
+        &lt;b:includable id='commentsLink'/&gt;
+        &lt;b:includable id='commentsLinkIframe'/&gt;
+        &lt;b:includable id='emailPostIcon'/&gt;
+        &lt;b:includable id='facebookShare'/&gt;
+        &lt;b:includable id='footerBylines'/&gt;
+        &lt;b:includable id='headerByline'/&gt;
+        &lt;b:includable id='googlePlusShare'/&gt;
+        &lt;b:includable id='linkShare'/&gt;
+        &lt;b:includable id='otherSharingButton'/&gt;
+        &lt;b:includable id='platformShare'/&gt;
+        &lt;b:includable id='postAuthor'/&gt;
+        &lt;b:includable id='postCommentsLink'/&gt;
+        &lt;b:includable id='postJumpLink'/&gt;
+        &lt;b:includable id='postLabels'/&gt;
+        &lt;b:includable id='postLocation'/&gt;
+        &lt;b:includable id='postReactions'/&gt;
+        &lt;b:includable id='postShareButtons'/&gt;
+        &lt;b:includable id='postTimestamp'/&gt;
+        &lt;b:includable id='sharingButton'/&gt;
+        &lt;b:includable id='sharingButtonContent'/&gt;
+        &lt;b:includable id='sharingButtons'/&gt;
+        &lt;b:includable id='sharingButtonsMenu'/&gt;
+        &lt;b:includable id='sharingPlatformIcon'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='PopularPosts,FeaturedPost'&gt;
+        &lt;b:includable id='snippetedPostByline'/&gt;
+        &lt;b:includable id='snippetedPostContent'/&gt;
+        &lt;b:includable id='snippetedPosts'/&gt;
+        &lt;b:includable id='snippetedPostThumbnail'/&gt;
+        &lt;b:includable id='snippetedPostTitle'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Blog'&gt;
+        &lt;b:includable id='aboutPostAuthor'/&gt;
+        &lt;b:includable id='addComments'/&gt;
+        &lt;b:includable id='commentAuthorAvatar'/&gt;
+        &lt;b:includable id='commentDeleteIcon'/&gt;
+        &lt;b:includable id='commentForm'/&gt;
+        &lt;b:includable id='commentFormIframeSrc'/&gt;
+        &lt;b:includable id='commentItem'/&gt;
+        &lt;b:includable id='commentList'/&gt;
+        &lt;b:includable id='commentPicker'/&gt;
+        &lt;b:includable id='comments'/&gt;
+        &lt;b:includable id='commentsTitle'/&gt;
+        &lt;b:includable id='feedLinks'/&gt;
+        &lt;b:includable id='feedLinksBody'/&gt;
+        &lt;b:includable id='homePageLink'/&gt;
+        &lt;b:includable id='iframeComments'/&gt;
+        &lt;b:includable id='inlineAd'/&gt;
+        &lt;b:includable id='manageComments'/&gt;
+        &lt;b:includable id='nextPageLink'/&gt;
+        &lt;b:includable id='post'/&gt;
+        &lt;b:includable id='postBody'/&gt;
+        &lt;b:includable id='postBodySnippet'/&gt;
+        &lt;b:includable id='postCommentsAndAd'/&gt;
+        &lt;b:includable id='postFooter'/&gt;
+        &lt;b:includable id='postFooterAuthorProfile'/&gt;
+        &lt;b:includable id='postHeader'/&gt;
+        &lt;b:includable id='postMeta'/&gt;
+        &lt;b:includable id='postMetadataJSONImage'/&gt;
+        &lt;b:includable id='postMetadataJSONPublisher'/&gt;
+        &lt;b:includable id='postPagination'/&gt;
+        &lt;b:includable id='postTitle'/&gt;
+        &lt;b:includable id='previousPageLink'/&gt;
+        &lt;b:includable id='threadedCommentForm'/&gt;
+        &lt;b:includable id='threadedCommentJs'/&gt;
+        &lt;b:includable id='threadedComments'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='BlogArchive'&gt;
+        &lt;b:includable id='flat'/&gt;
+        &lt;b:includable id='hierarchy'/&gt;
+        &lt;b:includable id='interval'/&gt;
+        &lt;b:includable id='posts'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='BlogSearch'&gt;
+        &lt;b:includable id='searchForm'/&gt;
+        &lt;b:includable id='searchSubmit'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Header'&gt;
+        &lt;b:includable id='behindImageStyle'/&gt;
+        &lt;b:includable id='description'/&gt;
+        &lt;b:includable id='image'/&gt;
+        &lt;b:includable id='title'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Label'&gt;
+        &lt;b:includable id='cloud'/&gt;
+        &lt;b:includable id='list'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='PageList'&gt;
+        &lt;b:includable id='overflowButton'/&gt;
+        &lt;b:includable id='overflowablePageList'/&gt;
+        &lt;b:includable id='pageLink'/&gt;
+        &lt;b:includable id='pageList'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Profile'&gt;
+        &lt;b:includable id='authorProfileImage'/&gt;
+        &lt;b:includable id='defaultProfileImage'/&gt;
+        &lt;b:includable id='profileImage'/&gt;
+        &lt;b:includable id='teamProfile'/&gt;
+        &lt;b:includable id='teamProfileLink'/&gt;
+        &lt;b:includable id='userGoogleProfile'/&gt;
+        &lt;b:includable id='userLocation'/&gt;
+        &lt;b:includable id='userProfile'/&gt;
+        &lt;b:includable id='userProfileData'/&gt;
+        &lt;b:includable id='userProfileImage'/&gt;
+        &lt;b:includable id='userProfileInfo'/&gt;
+        &lt;b:includable id='userProfileLink'/&gt;
+        &lt;b:includable id='userProfileText'/&gt;
+        &lt;b:includable id='viewProfileLink'/&gt;
+      &lt;/b:defaultmarkup&gt;
+      &lt;b:defaultmarkup type='Subscribe'&gt;
+        &lt;b:includable id='feeds'/&gt;
+      &lt;/b:defaultmarkup&gt;
+    &lt;/b:defaultmarkups&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;b:if cond='data:view.isLayoutMode'&gt;
+      &lt;b:section id='main'/&gt;
+    &lt;/b:if&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+
+
+<p>El código que me has proporcionado es un ejemplo avanzado del uso de las etiquetas <code class="">&lt;b:defaultmarkups&gt;</code> en Blogger. Define el marcado predeterminado para una gran variedad de tipos de contenido y elementos de la plantilla.</p>
+
+
+
+<p><strong>Explicación del código:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong class="">Estructura:</strong>
+<ul class="wp-block-list">
+<li>El código principal está encerrado por las etiquetas <code class="">&lt;b:defaultmarkups&gt;</code> y <code class="">&lt;/b:defaultmarkups&gt;</code>.</li>
+
+
+
+<li>Dentro de este contenedor, se definen varios bloques <code class="">&lt;b:defaultmarkup&gt;</code> anidados. Cada bloque se configura con un atributo <code class="">type</code> que especifica el tipo de contenido al que se aplica el marcado predeterminado (por ejemplo, <code class="">type='All'</code>, <code class="">type='Blog'</code>, etc.).</li>
+
+
+
+<li>Cada bloque <code class="">&lt;b:defaultmarkup&gt;</code> contiene definiciones de fragmentos de código reutilizables usando la etiqueta <code class="">&lt;b:includable&gt;</code> con un identificador único (<code class="">id</code>).</li>
+</ul>
+</li>
+
+
+
+<li><strong>Tipos de contenido y fragmentos de código:</strong>
+<ul class="wp-block-list">
+<li><strong><code>type='All'</code>:</strong> Este bloque define fragmentos de código aplicables a todos los tipos de contenido (<code class="">&lt;b:includable id='main'/&gt;</code> y <code class="">&lt;b:includable id='content'/&gt;</code>).</li>
+
+
+
+<li><strong><code>type='AdSense,Blog'</code>:</strong> Define un fragmento de código para la unidad publicitaria de AdSense (probablemente relacionado con anuncios) que se aplica tanto a las entradas del blog (<code class="">Blog</code>) como a otros contenidos marcados como <code class="">AdSense</code>.</li>
+
+
+
+<li><strong><code>type='Blog,PopularPosts,FeaturedPost'</code>:</strong> Define varios fragmentos de código usados en las entradas del blog (<code class="">Blog</code>), entradas populares (<code class="">PopularPosts</code>) y entradas destacadas (<code class="">FeaturedPost</code>).</li>
+
+
+
+<li>Y así sucesivamente, el código continúa definiendo fragmentos para diferentes tipos de contenido, como comentarios, búsqueda, encabezado, etiquetas, etc.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p><strong>En resumen:</strong></p>
+
+
+
+<p>Este código proporciona una configuración detallada del marcado predeterminado para la mayoría de los elementos de una plantilla de Blogger. Los fragmentos reutilizables definidos con <code class="">&lt;b:includable&gt;</code> se pueden insertar en otras secciones de la plantilla utilizando la etiqueta <code class="">&lt;b:include&gt;</code> con el identificador correspondiente. Esta separación de código y la reutilización de fragmentos permiten una organización limpia y un mantenimiento más sencillo de la plantilla.</p>
+
+
+
+<p><strong>Consideraciones:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Este código parece ser una parte de una plantilla más grande y necesitaría integrarse con el resto del código de la plantilla para funcionar correctamente.</li>
+
+
+
+<li>Es posible que algunos de los fragmentos de código definidos (<code class="">b:includable</code>) no se muestren en la página final, ya que su inclusión depende de otros factores de la plantilla y la configuración de los widgets.</li>
+</ul>
+
+
+
+<p>Si necesitas ayuda para comprender cómo se utilizan estos fragmentos específicos en la plantilla, necesitaría ver el código completo de la plantilla o al menos la sección donde se utilizan las etiquetas <code class="">&lt;b:include&gt;</code> para incluir estos fragmentos.</p>
+
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo incrementar el límite de memoria en WordPress</title>
+    <meta name="description" content="Existen dos métodos principales para aumentar el límite de memoria en WordPress: 1. Editar el archivo wp-config.php: Este método es el más común y sencillo. Par">
+    <meta name="keywords" content="experto wordpress, trabajos wordpres, Web Full-Stack">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="medium-padding" style="max-width: 750px; margin: 0 auto">
+        <a class="button border secondary" href="./blog">Volver al blog</a>
+        <div id="post-content">
+            <h1>Cómo incrementar el límite de memoria en WordPress</h1>
+            
+<p>Existen dos métodos principales para aumentar el límite de memoria en WordPress:</p>
+
+
+
+<p><strong>1. Editar el archivo wp-config.php:</strong></p>
+
+
+
+<p>Este método es el más común y sencillo. Para ello, sigue estos pasos:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Accede al archivo wp-config.php:</strong> Puedes hacerlo a través de un cliente FTP o mediante el administrador de archivos de tu proveedor de hosting. El archivo se encuentra en la raíz de tu instalación de WordPress.</li>
+
+
+
+<li><strong>Localiza la línea <code>define('WP_MEMORY_LIMIT', '256M');</code>:</strong> Esta línea define el límite de memoria actual. El valor por defecto suele ser 256MB, pero puedes aumentarlo a un valor mayor, como 512MB o 1024MB.</li>
+
+
+
+<li><strong>Guarda el archivo wp-config.php:</strong> Una vez que hayas modificado la línea, guarda el archivo y súbelo de nuevo al servidor si lo has editado mediante FTP.</li>
+</ul>
+
+
+
+<p><strong>2. Editar el archivo .htaccess:</strong></p>
+
+
+
+<p>Este método solo es necesario si tu proveedor de hosting no permite editar el archivo wp-config.php. Para ello, sigue estos pasos:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Accede al archivo .htaccess:</strong> Este archivo se encuentra en la raíz de tu instalación de WordPress. Si no lo encuentras, es posible que tengas que crearlo.</li>
+
+
+
+<li><strong>Añade la siguiente línea al final del archivo:</strong></li>
+</ul>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+php_value memory_limit 512M
+
+</pre></div>
+
+
+<ul class="wp-block-list">
+<li><strong>Guarda el archivo .htaccess:</strong> Una vez que hayas añadido la línea, guarda el archivo.</li>
+</ul>
+
+
+
+<p><strong>Consideraciones adicionales:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Antes de aumentar el límite de memoria, asegúrate de que realmente lo necesitas.</strong> Un límite de memoria demasiado alto puede provocar problemas de rendimiento en tu servidor.</li>
+
+
+
+<li><strong>Si no estás seguro de qué valor de límite de memoria utilizar, contacta con tu proveedor de hosting.</strong> Ellos podrán ayudarte a determinar el valor adecuado para tu sitio web.</li>
+
+
+
+<li><strong>Además de aumentar el límite de memoria, puedes tomar otras medidas para mejorar el rendimiento de tu sitio web de WordPress,</strong> como utilizar un tema y plugins ligeros, optimizar tus imágenes y comprimir tu código.</li>
+</ul>
+
+
+
+<p><strong>Recursos adicionales:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Cómo aumentar el límite de memoria PHP en WordPress:</strong> <a href="https://www.webempresa.com/blog/memoria-insuficiente-para-ejecutar-procesos-en-wordpress.html" target="_blank" rel="noreferrer noopener">https://www.webempresa.com/blog/memoria-insuficiente-para-ejecutar-procesos-en-wordpress.html</a></li>
+
+
+
+<li><strong>¿Cómo incrementar el WP Memory Limit?:</strong> <a href="https://www.siteground.es/kb/incrementar-memoria-php/" target="_blank" rel="noreferrer noopener">https://www.siteground.es/kb/incrementar-memoria-php/</a></li>
+
+
+
+<li><strong>Aumentar el límite de Memoria de WordPress:</strong> <a href="https://soporte-latam.hostgator.com/hc/es-419/articles/360037544972-C%C3%B3mo-aumentar-la-memoria-de-WordPress" target="_blank" rel="noreferrer noopener">https://soporte-latam.hostgator.com/hc/es-419/articles/360037544972-C%C3%B3mo-aumentar-la-memoria-de-WordPress</a></li>
+</ul>
+
+
+
+<p>Espero que esta información te sea útil. Si tienes alguna otra pregunta, no dudes en contactarme.</p>
+
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

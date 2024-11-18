@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar el campo web de los comentarios en WordPress</title>
+    <meta name="description" content="Eliminar el campo web de los comentarios en WordPress Existen dos métodos principales para eliminar el campo web de los comentarios en WordPress: 1. Usar un plu">
+    <meta name="keywords" content="experto wordpress, trabajos wordpres, Web Full-Stack">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="medium-padding" style="max-width: 750px; margin: 0 auto">
+        <a class="button border secondary" href="./blog">Volver al blog</a>
+        <div id="post-content">
+            <h1>Eliminar el campo web de los comentarios en WordPress</h1>
+            
+<h2 class="wp-block-heading">Eliminar el campo web de los comentarios en WordPress</h2>
+
+
+
+<p>Existen dos métodos principales para eliminar el campo web de los comentarios en WordPress:</p>
+
+
+
+<p><strong>1. Usar un plugin:</strong></p>
+
+
+
+<p>Este es el método más sencillo y recomendado, ya que no requiere conocimientos técnicos. Existen varios plugins disponibles para este propósito, uno de los más populares es <strong>&#8220;Remove Web Field From Comments Form&#8221;</strong>.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Pasos:</strong>
+<ol class="wp-block-list">
+<li>Accede al panel de administración de WordPress.</li>
+
+
+
+<li>Ve a <strong>Plugins &gt; Añadir nuevo</strong>.</li>
+
+
+
+<li>Busca <strong>&#8220;Remove Web Field From Comments Form&#8221;</strong> e instálalo.</li>
+
+
+
+<li>Activa el plugin.</li>
+</ol>
+</li>
+</ul>
+
+
+
+<p><strong>2. Editar el código del tema:</strong></p>
+
+
+
+<p>Este método requiere conocimientos básicos de PHP y edición de archivos.</p>
+
+
+
+<p><strong>Pasos:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Importante:</strong> Antes de editar cualquier archivo de tema, <strong>crea una copia de seguridad de tu sitio web</strong>.</li>
+</ul>
+
+
+
+<ol class="wp-block-list">
+<li>Accede al panel de administración de WordPress.</li>
+
+
+
+<li>Ve a <strong>Apariencia &gt; Editor de temas</strong>.</li>
+
+
+
+<li>Selecciona el tema hijo que estés utilizando (si no estás utilizando un tema hijo, selecciona tu tema principal).</li>
+
+
+
+<li>Busca el archivo <strong>functions.php</strong>.</li>
+
+
+
+<li>Al final del archivo, pega el siguiente código:</li>
+</ol>
+
+
+
+<p>PHP</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+function remove_comment_website_field($fields) {
+  unset($fields&#91;'comment_website']);
+  return $fields;
+}
+add_filter('comment_form_fields', 'remove_comment_website_field');
+
+</pre></div>
+
+
+<ol start="6" class="wp-block-list">
+<li>Guarda los cambios en el archivo <strong>functions.php</strong>.</li>
+</ol>
+
+
+
+<p><strong>3. Opción adicional: Ocultar el campo web con CSS</strong></p>
+
+
+
+<p>Si no te importa que el campo web siga siendo visible para los usuarios que inspeccionen el código de tu página, puedes ocultarlo con CSS. Para ello, agrega el siguiente código al archivo <strong>style.css</strong> de tu tema:</p>
+
+
+
+<p>CSS</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate" title="">
+.comment-form-comment-website {
+  display: none;
+}
+
+</pre></div>
+
+
+<p><strong>Consideraciones:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Eliminar el campo web de los comentarios puede dificultar que los usuarios encuentren los sitios web de los demás.</li>
+
+
+
+<li>Si decides eliminar el campo web, es importante que proporciones una forma alternativa para que los usuarios se conecten con sus sitios web, como en su perfil de autor.</li>
+</ul>
+
+
+
+<p><strong>Recursos adicionales:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://decodecms.com/eliminar-campo-url-los-comentarios-wordpress/" target="_blank" rel="noreferrer noopener">https://decodecms.com/eliminar-campo-url-los-comentarios-wordpress/</a></li>
+
+
+
+<li><a href="https://www.youtube.com/watch?v=VPRs670WppU" target="_blank" rel="noreferrer noopener">https://www.youtube.com/watch?v=VPRs670WppU</a></li>
+
+
+
+<li><a href="https://www.youtube.com/watch?v=_kzitJYfyIs" target="_blank" rel="noreferrer noopener">https://www.youtube.com/watch?v=_kzitJYfyIs</a></li>
+</ul>
+
+
+
+<p>Espero que esta información te sea útil.</p>
+
+
+
+<p>Si tienes alguna otra pregunta, no dudes en contactarme.</p>
+
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.12/dist/cdn/beer.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
